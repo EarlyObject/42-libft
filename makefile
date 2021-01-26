@@ -6,13 +6,13 @@
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/01/26 18:46:09 by asydykna         ###   ########.fr        #
+#    Updated: 2021/01/26 23:05:59 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = ft_bzero.c ft_memccpy.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strlcpy.c ft_strlen.c
+SRC = ft_atoi.c ft_bzero.c ft_isalpha.c ft_memccpy.c ft_memchr.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strlcpy.c ft_strlen.c
 
 OBJ = $(SRC:.c=.o)
 
