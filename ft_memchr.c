@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/25 14:03:57 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/26 18:45:22 by asydykna         ###   ########.fr       */
+/*   Created: 2021/01/26 18:43:47 by asydykna          #+#    #+#             */
+/*   Updated: 2021/01/26 19:50:02 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 void
-	*ft_memmove(void *dst, const void *src, size_t len)
+	*
+	ft_memchr(const void *s, int c, size_t n)
 {
-	char *a;
-	char *b;
-
-	a = (char*)src;
-	b = (char*)dst;
-	if (a < b)
+	while (n > 0)
 	{
-		while (len > 0)
-		{
-			a[len] = b[len];
-			len--;
-		}
+		if (*(unsigned char *)s == (unsigned char)c)
+			return ((void *)s);
+		s++;
+		n--;
 	}
-	else
-	{
-		ft_memcpy(dst, src, len);
-	}
-	return (dst);
+	return (NULL);
 }
+

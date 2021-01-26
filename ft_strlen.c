@@ -6,13 +6,13 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 13:24:00 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/22 14:04:18 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/01/26 18:45:42 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int ft_strlen(char *str)
 {
 	int i;
 

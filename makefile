@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: asydykna <asydykna@student.42madrid.com    +#+  +:+       +#+         #
+#    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/01/26 16:03:03 by asydykna         ###   ########.fr        #
+#    Updated: 2021/01/26 18:46:09 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

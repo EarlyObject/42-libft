@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asydykna <asydykna@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/25 11:00:30 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/26 13:40:17 by asydykna         ###   ########.fr       */
+/*   Created: 2021/01/26 18:44:13 by asydykna          #+#    #+#             */
+/*   Updated: 2021/01/26 18:44:21 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
