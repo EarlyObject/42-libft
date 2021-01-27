@@ -1,11 +1,14 @@
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
 #include "libft.h"
 
 int main(void)
 {
     char arr[] = "Good morning Vietnam";
+	char arr2[] = "Good morning Saigon";
     char numarr[] = "0246897531";
+	
 
     puts("\n*********************************");
     printf("ft_atoi\n");
@@ -36,9 +39,31 @@ int main(void)
     printf("YOUR'S  : %p\n", ft_memchr(arr, 'V', 20));
 
     puts("\n*********************************");
+    printf("ft_memcmp\n");
+	printf("ORIGINAL: %d\n", memcmp("", "",  4));
+    printf("YOUR'S  : %d\n", ft_memcmp("","", 4));
+	printf("ORIGINAL: %d\n", memcmp(arr, arr2,  15));
+    printf("YOUR'S  : %d\n", ft_memcmp(arr, arr2,  15));
+	printf("ORIGINAL: %d\n", memcmp("Xa", "Aa", 2));
+    printf("YOUR'S  : %d\n", ft_memcmp("a","Aa", 2));
+	printf("ORIGINAL: %d\n", memcmp("Good morning Vietnam", "Good morning Saigon", 10));
+    printf("YOUR'S  : %d\n", ft_memcmp("Good morning Vietnam", "Good morning Saigon", 10));
+	
+	puts("\n*********************************");
     printf("ft_memset\n");
     printf("ORIGINAL: %s\n", memset(arr, '$', 4));
     printf("YOUR'S  : %s\n", ft_memset(arr, '$', 4));
+
+	puts("\n*********************************");
+	char strlcatarr[] = "Good";
+	char strlcatarr2[] = "Good";
+    printf("ft_strlcat\n");
+	printf("ORIGINAL: %lu\n", strlcat("Aba", "Bcb", 3));
+    printf("YOUR'S  : %lu\n", ft_strlcat("Aba", "Bcb", 3));
+	/* strlcat(strlcatarr, "Day", 10);
+	ft_strlcat(strlcatarr2, "Day", 10);
+    printf("ORIGINAL: %s\n", strlcatarr);
+	printf("YOUR'S  : %s\n", strlcatarr2); */
 
     return (0);
 }
