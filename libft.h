@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 14:02:04 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/27 13:43:03 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/01/28 19:45:29 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 #include <ctype.h>
 #include <stdio.h>
+
+//delete later
+#include <string.h>
 //# define NULL (void *)0
 //# include <unistd.h>
 
@@ -27,8 +30,11 @@ void *ft_memccpy(void *dst, const void *src, int c, size_t n);
 void *ft_memcpy(void *dst, const void *src, size_t n);
 void *ft_memmove(void *dst, const void *src, size_t len);
 void *ft_memset(void *b, int c, size_t len);
-size_t ft_strlcat(char * dst, const char *src, size_t dstsize);
+char *ft_strchr(const char *s, int c);
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
 unsigned int ft_strlcpy(char *dest, const char *src, unsigned int size);
-int ft_strlen(char *str);
+int ft_strlen(const char *str);
+char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+char *ft_strrchr(const char *s, int c);
 
 #endif

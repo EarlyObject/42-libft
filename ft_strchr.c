@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/21 13:24:00 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/27 17:35:21 by asydykna         ###   ########.fr       */
+/*   Created: 2021/01/28 10:50:15 by asydykna          #+#    #+#             */
+/*   Updated: 2021/01/28 11:09:22 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(const char *str)
+char *ft_strchr(const char *s, int c)
 {
-	int i;
-
-	i = 0;
-	while (*str != '\0')
+	if ((char)c == '\0')
+		return ((char *)s + ft_strlen(s));
+	while (*s)
 	{
-		i++;
-		str++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
-	return (i);
+	return (NULL);
 }

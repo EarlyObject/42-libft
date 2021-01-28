@@ -6,13 +6,27 @@
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/01/27 13:40:06 by asydykna         ###   ########.fr        #
+#    Updated: 2021/01/28 19:59:54 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = ft_atoi.c ft_bzero.c ft_isalpha.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strlcat.c ft_strlcpy.c ft_strlen.c
+SRC = ft_atoi.c	\
+	ft_bzero.c	\
+	ft_isalpha.c\
+	ft_memccpy.c\
+	ft_memchr.c\
+	ft_memcmp.c\
+	ft_memcpy.c\
+	ft_memmove.c\
+	ft_memset.c\
+	ft_strchr.c\
+	ft_strlcat.c\
+	ft_strlcpy.c\
+	ft_strlen.c\
+	ft_strnstr.c\
+	ft_strrchr.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -29,14 +43,19 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	# $(CC) $(CFLAGS) -I $(HDR) $(SRC) 
 	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean:
 	$(RM) $(OBJ)
 
-fclean:
+fclean: clean
 	$(RM) $(NAME)
 
-# re =
+re: fclean all
+
 program:
 	CC main.c $(NAME)
 	
+# delete later	
+debug:
+	CC -g main.c $(NAME)
