@@ -6,11 +6,9 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 22:36:01 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/26 22:36:07 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/01/29 11:36:12 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int ft_isalpha(int c)
 {

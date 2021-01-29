@@ -6,12 +6,11 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 18:43:47 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/26 19:50:02 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/01/29 11:36:52 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void
 	*
@@ -26,4 +25,3 @@ void
 	}
 	return (NULL);
 }
-

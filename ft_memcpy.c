@@ -6,19 +6,19 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 09:22:31 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/26 18:45:15 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/01/29 11:45:33 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void *ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char *a;
 	char *b;
 
-	a = (char*)src;
-	b = (char*)dst;
+	a = (char *)src;
+	b = (char *)dst;
 	while (n > 0)
 	{
 		*b = *a;

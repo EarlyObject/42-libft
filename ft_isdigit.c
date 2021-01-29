@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/07 12:03:11 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/29 11:35:53 by asydykna         ###   ########.fr       */
+/*   Created: 2021/01/29 09:40:58 by asydykna          #+#    #+#             */
+/*   Updated: 2021/01/29 11:36:23 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *str)
+int ft_isdigit(int c)
 {
-	int sign;
-	int count;
-
-	sign = 1;
-	count = 0;
-	while (*str == ' ' || (*str >= 9 && *str <= 13) || *str == 127)
-		str++;
-	while (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
-			sign *= -1;
-		str++;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		count *= 10;
-		count += *str - 48;
-		str++;
-	}
-	return (count * sign);
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
 }

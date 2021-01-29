@@ -6,15 +6,19 @@
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/01/28 19:59:54 by asydykna         ###   ########.fr        #
+#    Updated: 2021/01/29 11:02:22 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 SRC = ft_atoi.c	\
-	ft_bzero.c	\
+	ft_bzero.c\
+	ft_isalnum.c\
 	ft_isalpha.c\
+	ft_isascii.c\
+	ft_isdigit.c\
+	ft_isprint.c\
 	ft_memccpy.c\
 	ft_memchr.c\
 	ft_memcmp.c\
@@ -25,8 +29,11 @@ SRC = ft_atoi.c	\
 	ft_strlcat.c\
 	ft_strlcpy.c\
 	ft_strlen.c\
+	ft_strncmp.c\
 	ft_strnstr.c\
-	ft_strrchr.c
+	ft_strrchr.c\
+	ft_tolower.c\
+	ft_toupper.c
 
 OBJ = $(SRC:.c=.o)
 

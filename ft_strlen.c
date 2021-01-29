@@ -6,21 +6,21 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 13:24:00 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/27 17:35:21 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/01/29 12:36:58 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(const char *str)
+size_t ft_strlen(const char *s)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (*str != '\0')
+	while (*s != '\0')
 	{
 		i++;
-		str++;
+		s++;
 	}
 	return (i);
 }

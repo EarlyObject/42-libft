@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/07 12:03:11 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/29 11:35:53 by asydykna         ###   ########.fr       */
+/*   Created: 2020/12/02 19:04:43 by asydykna          #+#    #+#             */
+/*   Updated: 2021/01/29 11:01:17 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *str)
+int ft_tolower(int c)
 {
-	int sign;
-	int count;
-
-	sign = 1;
-	count = 0;
-	while (*str == ' ' || (*str >= 9 && *str <= 13) || *str == 127)
-		str++;
-	while (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
-			sign *= -1;
-		str++;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		count *= 10;
-		count += *str - 48;
-		str++;
-	}
-	return (count * sign);
+	if (c >= 65 && c <= 90)
+		c += 32;
+	return (c);
 }

@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/07 12:03:11 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/29 11:35:53 by asydykna         ###   ########.fr       */
+/*   Created: 2021/01/29 08:49:43 by asydykna          #+#    #+#             */
+/*   Updated: 2021/01/29 08:56:26 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *str)
-{
-	int sign;
-	int count;
+#include "libft.h"
 
-	sign = 1;
-	count = 0;
-	while (*str == ' ' || (*str >= 9 && *str <= 13) || *str == 127)
-		str++;
-	while (*str == '-' || *str == '+')
+int ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	if (n == 0)
+		return (0);
+	while (n != 0)
 	{
-		if (*str == '-')
-			sign *= -1;
-		str++;
+		if (*s1 != *s2++)
+			return (*(unsigned char *)s1 - *(unsigned char *)(s2 - 1));
+		if (*s1++ == '\0')
+			break;
+		n--;
 	}
-	while (*str >= '0' && *str <= '9')
-	{
-		count *= 10;
-		count += *str - 48;
-		str++;
-	}
-	return (count * sign);
+	return (0);
 }
