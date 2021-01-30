@@ -6,7 +6,7 @@
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/01/29 11:02:22 by asydykna         ###   ########.fr        #
+#    Updated: 2021/01/30 20:10:49 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libft.a
 
 SRC = ft_atoi.c	\
 	ft_bzero.c\
+	ft_calloc.c\
 	ft_isalnum.c\
 	ft_isalpha.c\
 	ft_isascii.c\
@@ -26,12 +27,16 @@ SRC = ft_atoi.c	\
 	ft_memmove.c\
 	ft_memset.c\
 	ft_strchr.c\
+	ft_strdup.c\
+	ft_strjoin.c\
 	ft_strlcat.c\
 	ft_strlcpy.c\
 	ft_strlen.c\
 	ft_strncmp.c\
 	ft_strnstr.c\
 	ft_strrchr.c\
+	ft_strtrim.c\
+	ft_substr.c\
 	ft_tolower.c\
 	ft_toupper.c
 

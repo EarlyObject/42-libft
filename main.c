@@ -32,6 +32,24 @@ int main(void)
     printf("YOUR'S  : %c\n", arr[5]);
 
     puts("\n*********************************\n");
+    printf("ft_calloc\n");
+    printf("ORIGINAL: %d, %d\n", *(int *)(calloc(4, sizeof(int))), *(int *)((calloc(3, sizeof(int))) + 2));
+    printf("YOUR'S  : %d, %d\n", *(int *)(ft_calloc(4, sizeof(int))), *(int *)((ft_calloc(3, sizeof(int))) + 2));
+
+    int *ip = calloc(3, sizeof(int));
+    int *ip2 = calloc(3, sizeof(int));
+    printf("ORIGINAL: ");
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%d ", ip[i]);
+    }
+    printf("\nYOUR'S  : ");
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%d ", ip[i]);
+    }
+
+    puts("\n*********************************\n");
     printf("ft_isalnum\n");
     printf("ORIGINAL: %d\n", isalnum('A'));
     printf("YOUR'S  : %d\n", ft_isalnum('A'));
@@ -138,6 +156,16 @@ int main(void)
     printf("YOUR'S  : %s\n", ft_strchr("Yocogama", '\0'));
 
     puts("\n*********************************\n");
+    printf("ft_strdup\n");
+    printf("ORIGINAL: %s\n", strdup("PariS"));
+    printf("YOUR'S  : %s\n", ft_strdup("PariS"));
+
+    puts("\n*********************************\n");
+    printf("ft_strjoin\n");
+    printf("YOUR'S  : %s\n", ft_strjoin("Apple", "Juice"));
+    printf("YOUR'S  : %s\n", ft_strjoin("$string1$", "_string2_"));
+
+    puts("\n*********************************\n");
     char sarr[7] = "Good";
     char sarr2[7] = "Good";
     char *sp = "Bad";
@@ -204,6 +232,16 @@ int main(void)
     printf("YOUR'S  : %s\n", ft_strrchr("Syru$", 'S'));
     printf("ORIGINAL: %s\n", strchr("Syru$", '\0'));
     printf("YOUR'S  : %s\n", ft_strchr("Syru$", '\0'));
+
+    puts("\n*********************************\n");
+    printf("ft_strtrim\n");
+    printf("YOUR'S  : %s\n", ft_strtrim("two words", "w"));
+    printf("YOUR'S  : %s\n", ft_strtrim("$Out of the two words, 'your' is the most common. It appears about 44 times more frequently than 'yours'", "$ ,'4"));
+
+    puts("\n*********************************\n");
+    printf("ft_substr\n");
+    printf("YOUR'S  : %s\n", ft_substr("Revolutionary", 1, 9));
+    printf("YOUR'S  : %s\n", ft_substr("Dorama", 2, 10));
 
     puts("\n*********************************\n");
     printf("ft_tolower\n");
