@@ -236,7 +236,8 @@ int main(void)
     puts("\n*********************************\n");
     printf("ft_strtrim\n");
     printf("YOUR'S  : %s\n", ft_strtrim("two words", "w"));
-    printf("YOUR'S  : %s\n", ft_strtrim("$Out of the two words, 'your' is the most common. It appears about 44 times more frequently than 'yours'", "$ ,'4"));
+    printf("YOUR'S  : %s\n", ft_strtrim("$Out of the two words, 'your' is the most common. It appears about 44 times more frequently than 'yours$$$' $\t \0\n$ $\0", "$ ,\t\n'4"));
+    printf("YOUR'S  : %s\n", ft_strtrim("$4' ,Out $4 of the two $4 words' $4' ,", "$ ,'4"));
 
     puts("\n*********************************\n");
     printf("ft_substr\n");
