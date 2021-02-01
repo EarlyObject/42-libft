@@ -6,14 +6,14 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 12:03:11 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/29 11:35:53 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/01 23:38:24 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int sign;
-	int count;
+	int	sign;
+	int	count;
 
 	sign = 1;
 	count = 0;

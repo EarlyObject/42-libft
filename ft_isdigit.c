@@ -6,11 +6,12 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 09:40:58 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/29 11:36:23 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/01 23:43:05 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int
+	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);

@@ -6,15 +6,16 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 17:48:49 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/30 18:37:10 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/01 23:59:40 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char
+	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *p;
+	char	*p;
 
 	p = (char *)malloc((len + 1) * sizeof(s));
 	if (!p)

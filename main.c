@@ -148,10 +148,6 @@ int main(void)
     printf("ORIGINAL: %s\n", memset(arr, '$', 4));
     printf("YOUR'S  : %s\n", ft_memset(arr, '$', 4));
 
-	
-	
-	
-
     puts("\n*********************************\n");
     printf("ft_strchr\n");
     printf("ORIGINAL: %s\n", strchr("Yocogama", 'g'));
@@ -266,16 +262,24 @@ int main(void)
     printf("ORIGINAL: %c\n", toupper('.'));
     printf("YOUR'S  : %c\n", ft_toupper('.'));
 
-	puts("\n*********************************\n");
+    puts("\n*********************************\n");
     printf("ft_split\n");
-    char** twodarr = ft_split("$Yocco$gama$", '$');
-	int it = 0;
-	while (twodarr[it] != NULL)
-	{
-		printf("%s\n", twodarr[it]);
-		it++;
-	}
-   // printf("YOUR'S  : %s\n", );
+    printf("YOUR'S  : \n");
+    char **arr2d = ft_split("$Yocco$gama$", '$');
+    int it = 0;
+    while (arr2d[it] != NULL)
+    {
+        printf("%s\n", arr2d[it]);
+        it++;
+    }
+    char **arr2d2 = ft_split("$Harvey&Barns$ was famous$ bookstore on the 5th Avenue $ in New-York.$", '$');
+    int itr = 0;
+    while (arr2d2[itr] != NULL)
+    {
+        printf("%s\n", arr2d2[itr]);
+        itr++;
+    }
+    //
 
     return (0);
 }

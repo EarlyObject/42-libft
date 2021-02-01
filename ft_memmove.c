@@ -6,18 +6,17 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 14:03:57 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/31 18:57:31 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/01 23:46:00 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void
-	*
-	ft_memmove(void *dst, const void *src, size_t len)
+	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *a;
-	char *b;
+	char	*a;
+	char	*b;
 
 	a = (char *)src;
 	b = (char *)dst;

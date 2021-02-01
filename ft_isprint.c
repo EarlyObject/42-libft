@@ -6,11 +6,12 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 15:44:57 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/29 10:47:13 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/01 23:43:21 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int
+	ft_isprint(int c)
 {
 	if (c <= 31 || c > 126)
 		return (0);

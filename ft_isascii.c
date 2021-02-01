@@ -6,11 +6,12 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 10:19:16 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/29 10:22:02 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/01 23:42:20 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int
+	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

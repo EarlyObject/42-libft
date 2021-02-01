@@ -6,16 +6,17 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 13:28:46 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/29 12:28:14 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/01 23:51:10 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t
+	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	unsigned int i;
-	size_t result;
+	unsigned int	i;
+	size_t			result;
 
 	i = 0;
 	result = ft_strlen(src);

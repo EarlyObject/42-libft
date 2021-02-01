@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 09:10:17 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/01 13:42:11 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/01 23:05:39 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,64 +14,72 @@
 
 char **ft_split(char const *s, char c)
 {
-	char *start;
-	//char *p2;
-	char *ptemp;
-	size_t slen;
-	size_t separator;
 	char **temp;
-	
-	separator = 0;
-	ptemp = ft_strtrim(s, &c);
-	printf("\ntrimmed string is: %s, sizeof = %zu\n", ptemp, sizeof(ptemp));
-	start = ptemp;
-	while (*ptemp)
-	{
-		if (*ptemp == c)
-			separator++;
-		ptemp++;
-	}
-	printf("%zu separators detected\n", separator);
+	char **final;
 	size_t rows;
-	rows = separator + 2;
+	size_t columns;
+	size_t i;
+	size_t j;
 
-	temp = ft_calloc((rows), sizeof(s));
-	/* char* w1 = "first";
-	char* w2 = "second";
-	temp[0] = w1;
-	temp[1] = w2; */
-	int rowcount = 0;
-	//printf("trimmed string is: %s, sizeof = %zu\n", ptemp, sizeof(ptemp));
-	while (*start != '\0')
+	temp = NULL;
+	final = NULL;
+	rows = 0;
+	while (*s)
 	{
-		slen = 0;
-		while (*(start + slen) != c)
+		columns = 0;
+		while (*s == c)
+			s++;
+		if (*s == '\0')
+			break;
+		while (*s && *s != c)
 		{
-			printf("Start value %c", *(start + slen));
-			slen++;
+			columns++;
+			s++;
 		}
-		printf("length of string is %zu\n", slen);
-
-		char *row = ft_calloc((slen + 1), sizeof(s));
-		memcpy(row, start, slen);
-		temp[rowcount] = row;
-		rowcount++; 
-		start = (start + slen);
-		while (*start == c && *start != '\0')
+		rows++;
+		temp = ft_calloc(rows + 1, sizeof(s));
+		i = 0;
+		while (i < rows - 1)
 		{
-			start++;
+			j = ft_strlen(&final[i][0]);
+			temp[i] = ft_calloc(j + 1, sizeof(s));
+			memcpy(&temp[i][0], &final[i][0], j);
+			i++;
 		}
-		
-		printf("the row is %s\n", row);
-		//printf("%s\n", start);
-		break;
+		temp[rows - 1] = ft_calloc(columns + 1, sizeof(s));
+		memcpy(&temp[rows - 1][0], s - columns, columns);
 
-	/* 	char *row = ft_calloc((slen + 1), sizeof(s));
-		ft_strlcpy(row, start, slen + 1);
-		temp[rowcount] = row; */
-		/* start += slen;
-		 */
+		final = temp;
+		free(temp);
+		if (*s == '\0')
+			break;
 	}
-	//temp[rows - 1] = NULL;
-	return temp;
+	return final;
 }
+
+/* while (*s)
+	{
+		columns = 0;
+		while (*s == c)
+			s++;
+		while (*s && *s != c)
+		{
+			columns++;
+			s++;
+		}
+		rows++;
+		temp = ft_calloc(rows + 1, sizeof(s));
+		i = 0;
+		while (i < rows - 1)
+		{
+			j = ft_strlen(&final[i][0]);
+			temp[i] = ft_calloc(j + 1, sizeof(s));
+			memcpy(&temp[i][0], &final[i][0], j);
+			i++;
+		}
+		temp[rows - 1] = ft_calloc(columns + 1, sizeof(s));
+		memcpy(&temp[rows - 1][0], s - columns, columns);
+		s++;
+		final = temp;
+		free(temp);
+	} */
