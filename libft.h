@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 14:02:04 by asydykna          #+#    #+#             */
-/*   Updated: 2021/01/30 20:10:39 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/01 10:22:50 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void *ft_memccpy(void *dst, const void *src, int c, size_t n);
 void *ft_memcpy(void *dst, const void *src, size_t n);
 void *ft_memmove(void *dst, const void *src, size_t len);
 void *ft_memset(void *b, int c, size_t len);
+char **ft_split(char const *s, char c);
 char *ft_strchr(const char *s, int c);
 char *ft_strdup(const char *s1);
 char *ft_strjoin(char const *s1, char const *s2);

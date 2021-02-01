@@ -148,6 +148,10 @@ int main(void)
     printf("ORIGINAL: %s\n", memset(arr, '$', 4));
     printf("YOUR'S  : %s\n", ft_memset(arr, '$', 4));
 
+	
+	
+	
+
     puts("\n*********************************\n");
     printf("ft_strchr\n");
     printf("ORIGINAL: %s\n", strchr("Yocogama", 'g'));
@@ -261,6 +265,17 @@ int main(void)
     printf("YOUR'S  : %c\n", ft_toupper('B'));
     printf("ORIGINAL: %c\n", toupper('.'));
     printf("YOUR'S  : %c\n", ft_toupper('.'));
+
+	puts("\n*********************************\n");
+    printf("ft_split\n");
+    char** twodarr = ft_split("$Yocco$gama$", '$');
+	int it = 0;
+	while (twodarr[it] != NULL)
+	{
+		printf("%s\n", twodarr[it]);
+		it++;
+	}
+   // printf("YOUR'S  : %s\n", );
 
     return (0);
 }
