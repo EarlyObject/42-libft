@@ -264,22 +264,31 @@ int main(void)
 
     puts("\n*********************************\n");
     printf("ft_split\n");
-    printf("YOUR'S  : \n");
-    char **arr2d = ft_split("$Yocco$gama$", '$');
-    int it = 0;
-    while (arr2d[it] != NULL)
+    printf("YOUR'S  : \n\n");
+    char **arr2d;
+    arr2d = ft_split("$Yocco$gama$", '$');
+    int i = 0;
+    while (arr2d[i] != NULL)
     {
-        printf("%s\n", arr2d[it]);
-        it++;
+        printf("%s\n", arr2d[i]);
+        i++;
     }
-    char **arr2d2 = ft_split("$Harvey&Barns$ was famous$ bookstore on the 5th Avenue $ in New-York.$", '$');
-    int itr = 0;
-    while (arr2d2[itr] != NULL)
+    printf("\n");
+    arr2d = ft_split("$Bed$was$hard$", '$');
+    i = 0;
+    while (arr2d[i] != NULL)
     {
-        printf("%s\n", arr2d2[itr]);
-        itr++;
+        printf("%s\n", arr2d[i]);
+        i++;
     }
-    //
+    printf("\n");
+    arr2d = ft_split("$Harvey&Barns$$ was famous$ bookstore on the 5th Avenue $ in New-York.$", '$');
+    i = 0;
+    while (arr2d[i] != NULL)
+    {
+        printf("%s\n", arr2d[i]);
+        i++;
+    }
 
     return (0);
 }

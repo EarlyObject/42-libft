@@ -6,7 +6,7 @@
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/02/01 10:23:10 by asydykna         ###   ########.fr        #
+#    Updated: 2021/02/02 13:52:16 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ fclean: clean
 
 re: fclean all
 
-program:
+program: all
 	CC main.c $(NAME)
 	
 # delete later	

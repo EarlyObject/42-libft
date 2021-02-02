@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 09:10:17 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/02 18:37:23 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/02 22:39:42 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,22 @@ void	filllastrow(size_t rows, size_t columns, char **temp, const char *s)
 	temp[rows] = NULL;
 }
 
-void	backup(size_t rows, size_t columns, char **temp, char **final)
+const char	*checkstr(char const *s, char c)
 {
-	ft_memcpy(final, temp, (rows + 1) * (columns + rows));
-	free(temp);
+	while (*s == c)
+		s++;
+	return (s);
+}
+
+char	**buildtemp(char **temp, char **final, size_t rows)
+{
+	size_t	i;
+
+	temp = (char**)ft_calloc((rows + 1), sizeof(char));
+	i = -1;
+	while (++i < (rows - 1))
+		fillrows(i, temp, final);
+	return (temp);
 }
 
 char
@@ -41,30 +53,24 @@ char
 	char	**final;
 	size_t	rows;
 	size_t	columns;
-	size_t	i;
 
 	rows = 0;
 	final = NULL;
 	while (*s)
 	{
-		columns = 0;
-		while (*s == c)
-			s++;
-		if (*s == '\0')
+		s = checkstr(s, c);
+		if (!*s)
 			break ;
-		while (*s && *s != c)
-		{
+		columns = 0;
+		--s;
+		while (s++ && *s && *s != c)
 			columns++;
-			s++;
-		}
 		rows++;
-		temp = (char**)ft_calloc((rows + 1), sizeof(s));
-		i = -1;
-		while (++i < (rows - 1))
-			fillrows(i, temp, final);
+		temp = buildtemp(temp, final, rows);
 		filllastrow(rows, columns, temp, s);
 		final = (char**)ft_calloc((rows + 1) * (columns + rows), sizeof(s));
-		backup(rows, columns, temp, final);
+		ft_memcpy(final, temp, (rows + 1) * (columns + rows));
+		free(temp);
 	}
 	return (final);
 }
