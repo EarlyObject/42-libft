@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 10:01:15 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/03 12:44:58 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/03 13:04:54 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,3 +59,7 @@ char *ft_itoa(int n)
 }
 
 
+//https://www.javatpoint.com/itoa-function-in-c
+//https://faq.cprogramming.com/cgi-bin/smartfaq.cgi?id=1043284385&answer=1043808026
+//https://www.techiedelight.com/implement-itoa-function-in-c/
+//https://stackoverflow.com/questions/3068397/finding-the-length-of-an-integer-in-c
