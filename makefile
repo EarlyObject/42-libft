@@ -6,7 +6,7 @@
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/02/02 13:52:16 by asydykna         ###   ########.fr        #
+#    Updated: 2021/02/03 12:27:09 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC = ft_atoi.c	\
 	ft_isascii.c\
 	ft_isdigit.c\
 	ft_isprint.c\
+	ft_itoa.c\
 	ft_memccpy.c\
 	ft_memchr.c\
 	ft_memcmp.c\

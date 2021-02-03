@@ -6,14 +6,14 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 16:59:58 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/01 23:47:32 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/03 09:39:29 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *
-	ft_strdup(const char *s1)
+char
+	*ft_strdup(const char *s1)
 {
 	size_t	len;
 	char	*p;

@@ -6,13 +6,13 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 16:24:04 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/01 23:40:33 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/03 09:38:05 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	
+void
 	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;

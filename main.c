@@ -290,5 +290,17 @@ int main(void)
         i++;
     }
 
+	puts("\n*********************************\n");
+    printf("ft_itoa\n");
+	printf("%s\n", ft_itoa(0));
+	printf("%s\n", ft_itoa(-7));
+	printf("%s\n", ft_itoa(-24));
+	printf("%s\n", ft_itoa(-391));
+	printf("%s\n", ft_itoa(489));
+	printf("%s\n", ft_itoa(2147483647));
+	printf("%s\n", ft_itoa(-2147483648));
+	printf("%s\n", ft_itoa(2147483648));
+	printf("%s\n", ft_itoa(2147483649));
+
     return (0);
 }

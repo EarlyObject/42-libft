@@ -6,13 +6,14 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 09:10:17 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/02 22:39:42 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/03 09:38:58 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	fillrows(size_t i, char **temp, char **final)
+void
+	fillrows(size_t i, char **temp, char **final)
 {
 	size_t	j;
 
@@ -21,21 +22,24 @@ void	fillrows(size_t i, char **temp, char **final)
 	ft_memcpy(temp[i], final[i], j + 1);
 }
 
-void	filllastrow(size_t rows, size_t columns, char **temp, const char *s)
+void
+	filllastrow(size_t rows, size_t columns, char **temp, const char *s)
 {
 	temp[rows - 1] = (char*)ft_calloc((columns + 1), sizeof(char));
 	ft_memcpy(temp[rows - 1], s - columns, columns);
 	temp[rows] = NULL;
 }
 
-const char	*checkstr(char const *s, char c)
+const char
+	*checkstr(char const *s, char c)
 {
 	while (*s == c)
 		s++;
 	return (s);
 }
 
-char	**buildtemp(char **temp, char **final, size_t rows)
+char
+	**buildtemp(char **temp, char **final, size_t rows)
 {
 	size_t	i;
 
