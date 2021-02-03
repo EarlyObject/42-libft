@@ -292,15 +292,12 @@ int main(void)
 
 	puts("\n*********************************\n");
     printf("ft_itoa\n");
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(-7));
-	printf("%s\n", ft_itoa(-24));
-	printf("%s\n", ft_itoa(-391));
-	printf("%s\n", ft_itoa(489));
-	printf("%s\n", ft_itoa(2147483647));
-	printf("%s\n", ft_itoa(-2147483648));
-	printf("%s\n", ft_itoa(2147483648));
-	printf("%s\n", ft_itoa(2147483649));
+	printf("integer %d, string %s\n", 0, ft_itoa(0));
+	printf("integer %d, string %s\n", -7, ft_itoa(-7));
+	printf("integer %d, string %s\n", 395, ft_itoa(395));
+	printf("integer %d, string %s\n", -391, ft_itoa(-391));
+	printf("integer %d, string %s\n", 2147483647, ft_itoa(2147483647));
+	printf("integer %d, string %s\n", -2147483648, ft_itoa(-2147483648));
 
     return (0);
 }

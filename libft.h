@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 14:02:04 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/03 12:26:59 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/03 19:07:47 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int		ft_intlen(int n);
+void	*ft_rstring(char *str);
 
 #endif

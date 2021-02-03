@@ -6,7 +6,7 @@
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/02/03 12:27:09 by asydykna         ###   ########.fr        #
+#    Updated: 2021/02/03 19:09:58 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,9 @@ SRC = ft_atoi.c	\
 	ft_strtrim.c\
 	ft_substr.c\
 	ft_tolower.c\
-	ft_toupper.c
+	ft_toupper.c\
+	ft_intlen.c\
+	ft_rstring.c
 
 OBJ = $(SRC:.c=.o)
 

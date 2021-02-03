@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_rstring.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/03 10:01:15 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/03 19:10:27 by asydykna         ###   ########.fr       */
+/*   Created: 2021/02/03 19:05:54 by asydykna          #+#    #+#             */
+/*   Updated: 2021/02/03 19:09:43 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char
-	*ft_itoa(int n)
+void
+	*ft_rstring(char *str)
 {
-	char	*str;
-	int		len;
-	int		flag;
+	char	*rstr;
+	size_t	len;
+	size_t	i;
 
-	len = ft_intlen(n);
-	str = ft_calloc(len + (n < 0 ? 2 : 1), sizeof(int));
-	flag = n < 0 ? 0 : 1;
-	if (n == 0)
-		*str++ = '0';
-	else if (n == -2147483648)
+	len = ft_strlen(str);
+	rstr = ft_calloc(len + 1, sizeof(char));
+	i = 0;
+	while (i < len)
 	{
-		*str++ = '8';
-		n /= 10;
+		rstr[i] = str[len - i - 1];
+		i++;
 	}
-	if (n < 0)
-		n *= -1;
-	while (n)
-	{
-		*str++ = (n % 10) + 48;
-		n /= 10;
-	}
-	if (flag == 0)
-		*str = '-';
-	return (ft_rstring(str - len));
+	return (rstr);
 }
