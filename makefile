@@ -6,7 +6,7 @@
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/02/03 19:09:58 by asydykna         ###   ########.fr        #
+#    Updated: 2021/02/04 09:47:36 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,10 @@ SRC = ft_atoi.c	\
 	ft_memcpy.c\
 	ft_memmove.c\
 	ft_memset.c\
+	ft_putchar_fd.c\
+	ft_putendl_fd.c\
+	ft_putnbr_fd.c\
+	ft_putstr_fd.c\
 	ft_split.c\
 	ft_strchr.c\
 	ft_strdup.c\
@@ -34,6 +38,7 @@ SRC = ft_atoi.c	\
 	ft_strlcat.c\
 	ft_strlcpy.c\
 	ft_strlen.c\
+	ft_strmapi.c\
 	ft_strncmp.c\
 	ft_strnstr.c\
 	ft_strrchr.c\

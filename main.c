@@ -97,6 +97,15 @@ int main(void)
     printf("YOUR'S  : %d\n", ft_isprint(128));
 
     puts("\n*********************************\n");
+    printf("ft_itoa\n");
+	printf("integer %d, string %s\n", 0, ft_itoa(0));
+	printf("integer %d, string %s\n", -7, ft_itoa(-7));
+	printf("integer %d, string %s\n", 395, ft_itoa(395));
+	printf("integer %d, string %s\n", -391, ft_itoa(-391));
+	printf("integer %d, string %s\n", 2147483647, ft_itoa(2147483647));
+	printf("integer %d, string %s\n", -2147483648, ft_itoa(-2147483648));
+
+    puts("\n*********************************\n");
     char mcarr[6] = "Hello";
     char mcarr2[6] = "Hello";
     printf("ft_memccpy\n");
@@ -290,14 +299,25 @@ int main(void)
         i++;
     }
 
-	puts("\n*********************************\n");
-    printf("ft_itoa\n");
-	printf("integer %d, string %s\n", 0, ft_itoa(0));
-	printf("integer %d, string %s\n", -7, ft_itoa(-7));
-	printf("integer %d, string %s\n", 395, ft_itoa(395));
-	printf("integer %d, string %s\n", -391, ft_itoa(-391));
-	printf("integer %d, string %s\n", 2147483647, ft_itoa(2147483647));
-	printf("integer %d, string %s\n", -2147483648, ft_itoa(-2147483648));
+    puts("\n*********************************\n");
+    printf("ft_strmapi\n");
+    printf("MISSING CHECK HERE!!!");
+
+    puts("\n*********************************\n");
+    printf("ft_putchar_fd\n");
+    printf("MISSING CHECK HERE!!!");
+
+    puts("\n*********************************\n");
+    printf("ft_putstr_fd\n");
+    printf("MISSING CHECK HERE!!!");
+
+    puts("\n*********************************\n");
+    printf("ft_putendl_fd\n");
+    printf("MISSING CHECK HERE!!!");
+    
+    puts("\n*********************************\n");
+    printf("ft_putnbr_fd\n");
+    printf("MISSING CHECK HERE!!!");
 
     return (0);
 }
