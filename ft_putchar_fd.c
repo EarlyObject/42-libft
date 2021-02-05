@@ -6,13 +6,14 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 08:52:56 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/04 09:28:39 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/05 12:03:46 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void
+	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

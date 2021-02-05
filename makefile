@@ -6,7 +6,7 @@
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/02/04 09:47:36 by asydykna         ###   ########.fr        #
+#    Updated: 2021/02/05 11:53:14 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,9 +47,21 @@ SRC = ft_atoi.c	\
 	ft_tolower.c\
 	ft_toupper.c\
 	ft_intlen.c\
-	ft_rstring.c
+	ft_rstring.c\
 
 OBJ = $(SRC:.c=.o)
+
+BONUS = ft_lstnew.c\
+	ft_lstadd_front.c\
+	ft_lstsize.c\
+	ft_lstlast.c\
+	ft_lstadd_back.c\
+	ft_lstdelone.c\
+	ft_lstclear.c\
+	ft_lstiter.c\
+	ft_lstmap.c
+	
+BONUS_OBJ = $(BONUS:.c=.o)
 
 CC = gcc
 
@@ -57,6 +69,7 @@ RM = rm -f
 
 CFLAGS = -Wall -Wextra -Werror
 
+#check why 
 HDR = libft.h
 
 all: $(NAME)
@@ -67,16 +80,18 @@ $(NAME): $(OBJ)
 	ranlib $(NAME)
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
+bonus: $(BONUS) $(BONUS_OBJ)
+	ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
+
 program: all
 	CC main.c $(NAME)
-	
-# delete later	
-debug:
-	CC -g main.c $(NAME)
+
+#check
+.PHONY:	

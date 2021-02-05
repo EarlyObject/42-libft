@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/04 09:37:08 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/05 12:04:15 by asydykna         ###   ########.fr       */
+/*   Created: 2021/02/05 08:55:06 by asydykna          #+#    #+#             */
+/*   Updated: 2021/02/05 12:00:25 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void
-	ft_putendl_fd(char *s, int fd)
+	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	if (s)
+	if (*alst)
 	{
-		ft_putstr_fd(s, fd);
-		ft_putchar_fd('\n', fd);
+		new->next = *alst;
+		*alst = new;
 	}
 }
