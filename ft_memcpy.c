@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/25 09:22:31 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/05 14:10:07 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 17:19:15 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ void
 	if (dst && src)
 	{
 		a = (char *)src;
-	b = (char *)dst;
-	while (n > 0)
-	{
-		*b = *a;
-		b++;
-		a++;
-		n--;
-	}
+		b = (char *)dst;
+		while (n > 0)
+		{
+			*b = *a;
+			b++;
+			a++;
+			n--;
+		}
 	}
 	return (dst);
 }

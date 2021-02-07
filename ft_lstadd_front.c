@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 08:55:06 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/07 10:47:03 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 17:19:57 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void
 	ft_lstadd_front(t_list **alst, t_list *new)
 {
-		new->next = *alst;
-		*alst = new;
+	new->next = *alst;
+	*alst = new;
 }

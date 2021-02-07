@@ -6,14 +6,15 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 09:23:28 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/07 10:55:31 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 17:18:06 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 t_list
-	*ft_lstlast(t_list *lst){
+	*ft_lstlast(t_list *lst)
+{
 	while (lst && lst->next != NULL)
 	{
 		lst = lst->next;

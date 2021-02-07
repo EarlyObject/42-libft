@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 10:54:22 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/07 16:19:31 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 17:20:16 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_list
 	if (!lst)
 		return (NULL);
 	if (!(temp = ft_lstnew((*f)(lst->content))))
-			return (NULL);
+		return (NULL);
 	first = temp;
 	while (lst->next)
 	{

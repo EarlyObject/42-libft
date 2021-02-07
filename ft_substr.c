@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 17:48:49 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/05 19:44:25 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 17:25:30 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char
 	if (!s)
 		return (NULL);
 	if (start > (unsigned int)ft_strlen(s))
-		return (ft_calloc(1, sizeof(char)));	
+		return (ft_calloc(1, sizeof(char)));
 	p = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!p)
 		return (NULL);
