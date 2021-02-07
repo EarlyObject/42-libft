@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 16:59:58 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/03 09:39:29 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/05 20:09:32 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char
 	char	*p;
 
 	len = ft_strlen(s1) + 1;
-	p = (char *)malloc(len * sizeof(s1));
+	p = (char *)malloc(len * sizeof(char));
 	if (!p)
 		return (NULL);
 	ft_strlcpy(p, s1, len);

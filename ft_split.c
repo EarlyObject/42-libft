@@ -6,94 +6,70 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 09:10:17 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/07 00:23:30 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 01:36:32 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//delete later
-#include "stdio.h"
 
 int
-	fillrows(size_t i, char **temp, char **final)
+	countrows(char *s, char c)
 {
-	size_t	j;
+	int	rows;
 
-	j = ft_strlen(final[i]);
-	if (!(temp[i] = (char *)ft_calloc((j + 1), sizeof(char))))
-		return -1 ;
-	ft_strlcpy(temp[i], final[i], (j + 1));
-	return 1;
-}
-
-int
-	filllastrow(size_t rows, size_t columns, char **temp, const char *s)
-{
-	if (!(temp[rows - 1] = (char*)ft_calloc((columns + 1), sizeof(char))))
-		return -1;
-	ft_strlcpy(temp[rows - 1], s - columns, columns + 1);
-	temp[rows] = NULL;
-	return 1;
-}
-
-const char
-	*checkstr(char const *s, char c)
-{
-	while (*s == c)
-		s++;
-	return (s);
-}
-
-char
-	**buildtemp(char **temp, char **final, size_t rows)
-{
-	size_t	i;
-
-	if (!(temp = (char**)ft_calloc((rows + 1), sizeof(char))))
-		return (NULL);
-	i = 0;
-	while (i < (rows - 1))
+	rows = 0;
+	while (s && *s)
 	{
-		if (fillrows(i, temp, final) < 0)
-			return NULL;
-		i++;
+		while (*s == c)
+			s++;
+		if (!*s)
+			break ;
+		while (*s && *s != c)
+			s++;
+		rows++;
 	}
-	return (temp);
+	return (rows);
+}
+
+int
+	checkstr(char *s, char c)
+{
+	int	chrs;
+
+	chrs = 0;
+	while (*s && *s != c)
+	{
+		chrs++;
+		s++;
+	}
+	return (chrs);
 }
 
 char
 	**ft_split(char const *s, char c)
 {
 	char	**temp;
-	char	**final;
-	size_t	rows;
-	size_t	columns;
-	size_t	columnstotal;
-	columnstotal = 0;
-	
-	rows = 0;
-	final = NULL;
+	int		rows;
+	int		chrs;
+	int		i;
+
+	i = 0;
+	rows = countrows((char*)s, c);
+	if (!s || !c || !(temp = ft_calloc(rows + 1, sizeof(char *))))
+		return (NULL);
 	while (*s)
 	{
-		s = checkstr(s, c);
+		while (*s == c)
+			s++;
 		if (!*s)
 			break ;
-		columns = 0;
-		--s;
-		while (s++ && *s && *s != c){
-			columns++;
-		columnstotal++;
-		}
-		rows++;
-		if (!(temp = buildtemp(temp, final, rows)))
-			return NULL;
-		if (filllastrow(rows, columns, temp, s) < 0)
-			return NULL;
-		if(!(final = (char **)malloc((rows+1) * sizeof(char*) + (columnstotal) * sizeof(char))))
+		chrs = checkstr((char *)s, c);
+		if (!(temp[i] = ft_calloc(chrs + 1, sizeof(char))))
 			return (NULL);
-		ft_memcpy(final, temp, ((rows + 1) * sizeof(char *) + (columnstotal) * sizeof(char)));
-		free(temp);
-		
+		ft_strlcpy(temp[i], s, chrs + 1);
+		i++;
+		s += chrs;
 	}
-	return (final);
+	temp[i] = NULL;
+	return (temp);
 }

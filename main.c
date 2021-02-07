@@ -299,6 +299,15 @@ int	main(void)
 	printf("%s\n", arr2d[i]);
 	i++;
 	}
+	printf("\n");
+	arr2d = ft_split("      split       this for   me  !       ", ' ');
+	i = 0;
+	while (arr2d[i] != NULL)
+	{
+	printf("\n%s, len = %zu", arr2d[i], ft_strlen(arr2d[i]));
+	i++;
+	}
+	printf("\n");
 
 	puts("\n*********************************\n");
 	printf("ft_strmapi\n");
@@ -320,5 +329,8 @@ int	main(void)
 	printf("ft_putnbr_fd\n");
 	printf("MISSING CHECK HERE!!!");
 
+	puts("\n*********************************\n");
+	printf("ft_calloc test\n");
+	
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 10:01:15 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/03 19:10:27 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/06 16:27:13 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char
 	int		flag;
 
 	len = ft_intlen(n);
-	str = ft_calloc(len + (n < 0 ? 2 : 1), sizeof(int));
+	if (!(str = ft_calloc(len + (n < 0 ? 2 : 1), sizeof(int))))
+		return (NULL);
 	flag = n < 0 ? 0 : 1;
 	if (n == 0)
 		*str++ = '0';

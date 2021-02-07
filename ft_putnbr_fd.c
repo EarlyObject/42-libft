@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 09:42:40 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/04 09:46:59 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/06 16:46:48 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
+	unsigned int num;
 
-	str = ft_itoa(n);
-	if (str)
+	num = n;
+	if (num < 0)
 	{
-		ft_putstr_fd(str, fd);
+		num *= -1;
+		ft_putchar_fd('-', fd);
 	}
+	if (num >= 10)
+	{
+		ft_putnbr_fd(num/10, fd);
+	}
+	ft_putchar_fd((num % 10) + 48, fd);
 }
