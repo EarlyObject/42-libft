@@ -6,11 +6,30 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 12:03:11 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/01 23:38:24 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 16:07:48 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+static int
+	calcrv(int sign, int count)
+{
+	if (sign < 0 && count > 0)
+	{
+		if (count == 2147483647)
+			return (2147483647);
+		return (0);
+	}
+	if (sign > 0 && count < 0)
+	{
+		if (count == -2147483648)
+			return (-2147483648);
+		return (-1);
+	}
+	return (count);
+}
+
+int
+	ft_atoi(const char *str)
 {
 	int	sign;
 	int	count;
@@ -28,8 +47,8 @@ int	ft_atoi(const char *str)
 	while (*str >= '0' && *str <= '9')
 	{
 		count *= 10;
-		count += *str - 48;
+		count += (*str - 48) * sign;
 		str++;
 	}
-	return (count * sign);
+	return (calcrv(sign, count));
 }

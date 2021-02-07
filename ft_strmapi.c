@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 08:29:32 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/05 20:05:54 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 11:49:35 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char
 	char	*copy;
 	int		i;
 
-	if (!(copy = ft_strdup(s)))
+	if (!s || !(copy = ft_strdup(s)))
 		return (NULL);
 	i = 0;
 	while (copy[i])

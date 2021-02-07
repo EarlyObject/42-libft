@@ -6,13 +6,13 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 18:58:45 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/05 20:11:49 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 16:11:06 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int
+static int
 	ft_isin(const char *set, char needle)
 {
 	while (*set)
@@ -33,6 +33,8 @@ char
 	size_t	total;
 	char	*p;
 
+	if (!s1)
+		return (NULL);
 	slen = ft_strlen(s1);
 	first = 0;
 	while (*(s1 + first) && ft_isin(set, *(s1 + first)))

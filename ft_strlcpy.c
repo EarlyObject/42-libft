@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 13:28:46 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/05 19:02:10 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 11:55:50 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t
 	size_t			result;
 
 	i = 0;
+	if (!src)
+		return (0);
 	result = ft_strlen(src);
 	if (dstsize != 0)
 	{

@@ -6,41 +6,41 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 18:11:05 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/03 09:40:16 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 17:05:14 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//delete
+#include "stdio.h"
+
 char
 	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*h;
-	char	*n;
-	size_t	nlen;
 	int		i;
 
-	if (*needle != '\0')
+	if (!*haystack)
+		return (NULL);
+	if (*needle)
 	{
 		h = (char *)haystack;
-		n = (char *)needle;
-		nlen = ft_strlen(needle);
-		do
+		while (*h)
 		{
-			if (nlen > len)
+			if (ft_strlen(needle) > len)
 				return (NULL);
-		i = 0;
-		while (h[i] == n[i])
-		{
-			if (n[i + 1] == '\0')
-				return (h);
-			i++;
+			i = 0;
+			while (h[i] == needle[i])
+			{
+				if (needle[i + 1] == '\0')
+					return (h);
+				i++;
+				len--;
+			}
+			h = i > 0 ? h + i : h + 1;
 			len--;
 		}
-		h = i > 0 ? h + i : h + 1;
-		len--;
 	}
-	while (h);
-}
-return ((char *)haystack);
+	return ((char *)haystack);
 }

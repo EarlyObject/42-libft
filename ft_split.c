@@ -6,13 +6,13 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 09:10:17 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/07 01:36:32 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/07 16:10:11 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int
+static int
 	countrows(char *s, char c)
 {
 	int	rows;
@@ -31,7 +31,7 @@ int
 	return (rows);
 }
 
-int
+static int
 	checkstr(char *s, char c)
 {
 	int	chrs;
