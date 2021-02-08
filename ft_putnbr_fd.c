@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 09:42:40 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/07 17:27:46 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/08 10:34:30 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	num;
+	long	num;
 
 	num = n;
 	if (num < 0)

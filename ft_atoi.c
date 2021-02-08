@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 12:03:11 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/07 16:07:48 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/08 10:46:48 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,13 @@ int
 	count = 0;
 	while (*str == ' ' || (*str >= 9 && *str <= 13) || *str == 127)
 		str++;
-	while (*str == '-' || *str == '+')
+	if (*str == '-' || *str == '+')
 	{
-		if (*str == '-')
-			sign *= -1;
+		sign = (*str == '-') ? -1 : 1;
 		str++;
 	}
+	if (!(*str >= '0' && *str <= '9'))
+		return (0);
 	while (*str >= '0' && *str <= '9')
 	{
 		count *= 10;

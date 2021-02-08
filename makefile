@@ -6,7 +6,7 @@
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/02/05 11:53:14 by asydykna         ###   ########.fr        #
+#    Updated: 2021/02/08 10:56:21 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,15 +51,15 @@ SRC = ft_atoi.c	\
 
 OBJ = $(SRC:.c=.o)
 
-BONUS = ft_lstnew.c\
-	ft_lstadd_front.c\
-	ft_lstsize.c\
-	ft_lstlast.c\
-	ft_lstadd_back.c\
-	ft_lstdelone.c\
-	ft_lstclear.c\
-	ft_lstiter.c\
-	ft_lstmap.c
+BONUS = ft_lstnew_bonus.c\
+	ft_lstadd_front_bonus.c\
+	ft_lstsize_bonus.c\
+	ft_lstlast_bonus.c\
+	ft_lstadd_back_bonus.c\
+	ft_lstdelone_bonus.c\
+	ft_lstclear_bonus.c\
+	ft_lstiter_bonus.c\
+	ft_lstmap_bonus.c
 	
 BONUS_OBJ = $(BONUS:.c=.o)
 
@@ -69,15 +69,10 @@ RM = rm -f
 
 CFLAGS = -Wall -Wextra -Werror
 
-#check why 
-HDR = libft.h
-
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	# $(CC) $(CFLAGS) -I $(HDR) $(SRC) 
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
 	$(RM) $(OBJ) $(BONUS_OBJ)
@@ -87,11 +82,7 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(BONUS) $(BONUS_OBJ)
-	ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
+bonus:  $(OBJ) $(BONUS) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
-program: all
-	CC main.c $(NAME)
-
-#check
-.PHONY:	
+phony: all clean fclean re bonus
