@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 18:58:45 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/07 16:11:06 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/08 11:53:03 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ static int
 char
 	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	slen;
 	size_t	first;
 	size_t	last;
 	size_t	total;
@@ -35,11 +34,10 @@ char
 
 	if (!s1)
 		return (NULL);
-	slen = ft_strlen(s1);
 	first = 0;
 	while (*(s1 + first) && ft_isin(set, *(s1 + first)))
 		first++;
-	last = slen;
+	last = ft_strlen(s1);
 	while ((s1 + last - 1 > s1 + first) && ft_isin(set, *(s1 + last - 1)))
 		last--;
 	total = last - first;
