@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 09:10:17 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/07 16:10:11 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/09 11:57:43 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,30 +18,25 @@ static int
 	int	rows;
 
 	rows = 0;
-	while (s && *s)
-	{
-		while (*s == c)
-			s++;
-		if (!*s)
-			break ;
-		while (*s && *s != c)
-			s++;
+	while (s && *s && *s == c)
+		s++;
+	if (s && *s && *s != c)
 		rows++;
-	}
+	while (s && *s && *s != c)
+		s++;
+	if (s && *s && *s == c)
+		rows += countrows(s, c);
 	return (rows);
 }
 
 static int
-	checkstr(char *s, char c)
+	count_chars(char *s, char c)
 {
 	int	chrs;
 
 	chrs = 0;
-	while (*s && *s != c)
-	{
+	while (s && s[chrs] && s[chrs] != c)
 		chrs++;
-		s++;
-	}
 	return (chrs);
 }
 
@@ -50,26 +45,27 @@ char
 {
 	char	**temp;
 	int		rows;
-	int		chrs;
 	int		i;
+	int		j;
 
-	i = 0;
-	rows = countrows((char*)s, c);
-	if (!s || !c || !(temp = ft_calloc(rows + 1, sizeof(char *))))
-		return (NULL);
-	while (*s)
+	i = -1;
+	rows = countrows((char *)s, c);
+	if (!s || !(temp = malloc(sizeof(char *) * (rows + 1))))
+		return (0);
+	while (++i < rows)
 	{
 		while (*s == c)
 			s++;
-		if (!*s)
-			break ;
-		chrs = checkstr((char *)s, c);
-		if (!(temp[i] = ft_calloc(chrs + 1, sizeof(char))))
-			return (NULL);
-		ft_strlcpy(temp[i], s, chrs + 1);
-		i++;
-		s += chrs;
+		if (!(temp[i] = malloc(sizeof(char) * (count_chars((char *)s, c) + 1))))
+			return (0);
+		j = 0;
+		while (*s && *s != c)
+		{
+			temp[i][j++] = *s;
+			s++;
+		}
+		temp[i][j] = '\0';
 	}
-	temp[i] = NULL;
+	temp[i] = 0;
 	return (temp);
 }

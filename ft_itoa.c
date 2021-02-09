@@ -6,38 +6,47 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 10:01:15 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/06 16:27:13 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/02/09 13:13:35 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static	unsigned int
+	count_len(int n)
+{
+	unsigned int len;
+
+	len = (n <= 0) ? 1 : 0;
+	while (n > 0 || n < 0)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
+}
+
 char
 	*ft_itoa(int n)
 {
-	char	*str;
-	int		len;
-	int		flag;
+	char				*p;
+	char				sign;
+	unsigned int		len;
 
-	len = ft_intlen(n);
-	if (!(str = ft_calloc(len + (n < 0 ? 2 : 1), sizeof(int))))
-		return (NULL);
-	flag = n < 0 ? 0 : 1;
-	if (n == 0)
-		*str++ = '0';
-	else if (n == -2147483648)
+	sign = (n < 0) ? '-' : '\0';
+	len = count_len(n);
+	if (!(p = malloc(sizeof(char) * (len + 1))))
+		return (0);
+	p[len] = '\0';
+	while (len)
 	{
-		*str++ = '8';
-		n /= 10;
+		if (n < 0)
+			p[--len] = -(n % 10) + '0';
+		else
+			p[--len] = (n % 10) + '0';
+		n = n / 10;
 	}
-	if (n < 0)
-		n *= -1;
-	while (n)
-	{
-		*str++ = (n % 10) + 48;
-		n /= 10;
-	}
-	if (flag == 0)
-		*str = '-';
-	return (ft_rstring(str - len));
+	if (sign)
+		p[len] = sign;
+	return (p);
 }
