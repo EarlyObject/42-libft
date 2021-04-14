@@ -21,6 +21,7 @@ SRC = ft_atoi.c	\
 	ft_isdigit.c\
 	ft_isprint.c\
 	ft_itoa.c\
+	ft_make_str.c\
 	ft_memccpy.c\
 	ft_memchr.c\
 	ft_memcmp.c\
@@ -47,6 +48,8 @@ SRC = ft_atoi.c	\
 	ft_tolower.c\
 	ft_toupper.c\
 	ft_intlen.c\
+	ft_uitoa.c\
+	ft_itoa_hex.c\
 
 OBJ = $(SRC:.c=.o)
 

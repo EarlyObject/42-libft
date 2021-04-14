@@ -1,39 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_uitoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/05 10:54:22 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/07 17:20:16 by asydykna         ###   ########.fr       */
+/*   Created: 2021/03/15 19:44:26 by asydykna          #+#    #+#             */
+/*   Updated: 2021/03/15 19:44:31 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list
-	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+static unsigned int
+	count_ulen(unsigned int n)
 {
-	t_list	*first;
-	t_list	*temp;
+	unsigned int	len;
 
-	if (!lst)
-		return (NULL);
-	temp = ft_lstnew((*f)(lst->content));
-	if (!temp)
-		return (NULL);
-	first = temp;
-	while (lst->next)
+	if (n <= 0)
+		len = 1;
+	else
+		len = 0;
+	while (n > 0 || n < 0)
 	{
-		lst = lst->next;
-		temp->next = ft_lstnew((*f)(lst->content));
-		if (!temp->next)
-		{
-			ft_lstclear(&first, del);
-			return (NULL);
-		}
-		temp = temp->next;
+		n = n / 10;
+		len++;
 	}
-	return (first);
+	return (len);
+}
+
+char
+	*ft_uitoa(unsigned int n)
+{
+	char			*p;
+	unsigned int	len;
+
+	len = count_ulen(n);
+	p = (char *)ft_calloc(len + 1, sizeof(char));
+	p[len] = '\0';
+	while (len)
+	{
+		p[--len] = (n % 10) + '0';
+		n = n / 10;
+	}
+	return (p);
 }
