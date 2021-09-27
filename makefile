@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/02/09 13:24:05 by asydykna         ###   ########.fr        #
+#    Updated: 2021/09/27 09:34:46 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,10 +50,7 @@ SRC = ft_atoi.c	\
 	ft_intlen.c\
 	ft_uitoa.c\
 	ft_itoa_hex.c\
-
-OBJ = $(SRC:.c=.o)
-
-BONUS = ft_lstnew_bonus.c\
+	ft_lstnew_bonus.c\
 	ft_lstadd_front_bonus.c\
 	ft_lstsize_bonus.c\
 	ft_lstlast_bonus.c\
@@ -62,8 +59,8 @@ BONUS = ft_lstnew_bonus.c\
 	ft_lstclear_bonus.c\
 	ft_lstiter_bonus.c\
 	ft_lstmap_bonus.c
-	
-BONUS_OBJ = $(BONUS:.c=.o)
+
+OBJ = $(SRC:.c=.o)
 
 CC = gcc
 
@@ -77,14 +74,11 @@ $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 clean:
-	$(RM) $(OBJ) $(BONUS_OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-bonus:  $(OBJ) $(BONUS) $(BONUS_OBJ)
-	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
-
-phony: all clean fclean re bonus
+phony: all clean fclean re
