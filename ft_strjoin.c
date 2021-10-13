@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: N/A
+** SYNOPSIS: concatenate two strings into a new string (with malloc)
+**
+** DESCRIPTION:
+** 		Allocates (with malloc(3)) and returns a new string, which is the
+**	result of the concatenation of ’s1’ and ’s2’.
+*/
+
 #include "libft.h"
 
 char

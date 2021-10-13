@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: N/A
+** SYNOPSIS: output string to given file with newline
+**
+** DESCRIPTION:
+** 		Outputs the string ’s’ to the given file descriptor, followed by a
+**	newline.
+*/
+
 #include "libft.h"
 
 void

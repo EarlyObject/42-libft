@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/05 10:10:36 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/05 10:36:40 by asydykna         ###   ########.fr       */
+/*   Created: 2021/02/05 10:48:53 by asydykna          #+#    #+#             */
+/*   Updated: 2021/02/05 10:53:38 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** SYNOPSIS: apply function to content of all list's elements
+**
+** DESCRIPTION:
+** 		Iterates the list ’lst’ and applies the function ’f’ to the content of
+**	each element.
+*/
 
 #include "libft.h"
 
 void
-	ft_lstdelone(t_list *lst, void (*del)(void *))
+	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!del)
+	if (!f)
 		return ;
-	if (lst)
+	while (lst)
 	{
-		(*del)(lst->content);
-		free(lst);
+		(*f)(lst->content);
+		lst = lst->next;
 	}
 }

@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <string.h>
+** SYNOPSIS: find length of string
+**
+** DESCRIPTION:
+** 		The strlen() function computes the length of the string s.
+*/
+
 #include "libft.h"
 
 size_t

@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <strings.h>
+** SYNOPSIS: write zeroes to a byte string
+**
+** DESCRIPTION:
+** 		The bzero() function writes n zeroed bytes to the string s. If n is
+**	zero, bzero() does nothing.
+*/
+
 #include "libft.h"
 
 void

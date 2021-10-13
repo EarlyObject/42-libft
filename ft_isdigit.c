@@ -10,6 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <ctype.h>
+** SYNOPSIS: decimal-digit character test
+**
+** DESCRIPTION:
+** 		The isdigit() function tests for a decimal digit character.
+*/
+
 int
 	ft_isdigit(int c)
 {

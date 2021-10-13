@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <ctype.h>
+** SYNOPSIS: upper case to lower case letter conversion
+**
+** DESCRIPTION:
+** 		The tolower() function converts an upper-case letter to the
+**	corresponding lower-case letter.
+*/
+
 int
 	ft_tolower(int c)
 {

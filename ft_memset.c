@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <string.h>
+** SYNOPSIS: write a byte to a byte string
+**
+** DESCRIPTION:
+** 		The memset() function writes n bytes of value c (converted to an
+**	unsigned char) to the string s.
+*/
+
 #include "libft.h"
 
 void

@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <ctype.h>
+** SYNOPSIS: printing character test (space character inclusive)
+**
+** DESCRIPTION:
+** 		The isprint() function tests for any printing character, including space
+**	(` ').
+*/
+
 int
 	ft_isprint(int c)
 {

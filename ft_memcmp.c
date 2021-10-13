@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <string.h>
+** SYNOPSIS: compare byte string
+**
+** DESCRIPTION:
+** 		The memcmp() function compares byte string s1 against byte string s2.
+**	Both strings are assumed to be n bytes long.
+*/
+
 #include "libft.h"
 
 int

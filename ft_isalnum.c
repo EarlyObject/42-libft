@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <ctype.h>
+** SYNOPSIS: alphanumeric character test
+**
+** DESCRIPTION:
+** 		The isalnum() function tests for any character for which isalpha(3) or
+**	isdigit(3) is true.
+*/
+
 #include "libft.h"
 
 int

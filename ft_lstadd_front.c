@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_make_str.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/29 11:38:14 by asydykna          #+#    #+#             */
-/*   Updated: 2021/03/29 11:38:32 by asydykna         ###   ########.fr       */
+/*   Created: 2021/02/05 08:55:06 by asydykna          #+#    #+#             */
+/*   Updated: 2021/09/28 12:01:01 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
+** SYNOPSIS: add new element at beginning of list
+**
 ** DESCRIPTION:
-** 		Reserves sufficient memory for creating null-terminated char array of
-** size received as argument and returns the pointer to that array.
+** 		Adds the element ’new’ at the beginning of the list.
 */
 
 #include "libft.h"
 
-char
-	*ft_make_str(size_t size)
+void
+	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	char	*p;
-
-	p = ft_calloc(size + 1, sizeof(char *));
-	ft_memset(p, 0, size + 1);
-	return (p);
+	if (!new)
+		return ;
+	if (alst)
+	{
+		if (*alst)
+			new->next = *alst;
+	}
+	*alst = new;
 }

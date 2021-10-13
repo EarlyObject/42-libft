@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/05 09:28:17 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/05 10:07:35 by asydykna         ###   ########.fr       */
+/*   Created: 2021/02/05 09:18:22 by asydykna          #+#    #+#             */
+/*   Updated: 2021/02/08 09:44:25 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** SYNOPSIS: count elements of a list
+**
+** DESCRIPTION:
+** 		Counts the number of elements in a list.
+*/
+
 #include "libft.h"
 
-void
-	ft_lstadd_back(t_list **lst, t_list *new)
+int
+	ft_lstsize(t_list *lst)
 {
-	t_list	*last;
+	size_t	size;
 
-	if (lst)
+	size = 0;
+	while (lst)
 	{
-		if (*lst)
-		{
-			last = ft_lstlast(*lst);
-			last->next = new;
-		}
-		else
-			*lst = new;
+		size++;
+		lst = lst->next;
 	}
+	return (size);
 }

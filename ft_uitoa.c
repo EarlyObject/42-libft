@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: N/A
+** SYNOPSIS: convert unsigned integer to ASCII string
+**
+** DESCRIPTION:
+** 		Allocates (with malloc(3)) and returns a string representing the
+**	unsigned integer received as an argument.
+*/
+
 #include "libft.h"
 
 static unsigned int

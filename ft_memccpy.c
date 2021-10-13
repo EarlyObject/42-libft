@@ -10,6 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <string.h>
+** SYNOPSIS: copy string until character found
+**
+** DESCRIPTION:
+** 		The memccpy() function copies bytes from string s2 to string s1.  If the
+**	character c (as converted to an unsigned char) occurs in the string s2,
+**	the copy stops and a pointer to the byte after the copy of c in the
+**	string s1 is returned.  Otherwise, n bytes are copied, and a NULL pointer
+**	is returned.
+*/
+
 #include "libft.h"
 
 void

@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: N/A
+** SYNOPSIS: convert hex number to ASCII string
+**
+** DESCRIPTION:
+** 		Allocates (with malloc(3)) and returns a string representing the
+**	hex integer received as an argument.
+*/
+
 #include "libft.h"
 
 int

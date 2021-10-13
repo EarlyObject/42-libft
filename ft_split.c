@@ -10,6 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: N/A
+** SYNOPSIS: split string, with specified character as delimiter, into an array
+**			of strings
+**
+** DESCRIPTION:
+** 		Allocates (with malloc(3)) and returns an array of strings obtained by
+**	splitting ’s’ using the character ’c’ as a delimiter. The array must be
+**	ended by a NULL pointer.
+*/
+
 #include "libft.h"
 
 static int

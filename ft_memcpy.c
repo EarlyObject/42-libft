@@ -10,6 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <string.h>
+** SYNOPSIS: copy memory area
+**
+** DESCRIPTION:
+** 		The memcpy() function copies n bytes from memory area s2 to memory area
+**	s1.  If s1 and s2 overlap, behavior is undefined.  Applications in which
+**	s1 and s2 might overlap should use memmove(3) instead.
+*/
+
 #include "libft.h"
 
 void

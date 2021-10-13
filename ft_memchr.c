@@ -10,6 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <string.h>
+** SYNOPSIS: locate byte in byte string
+**
+** DESCRIPTION:
+** 		The memchr() function locates the first occurrence of c (converted to an
+**	unsigned char) in string s.
+*/
+
+
 #include "libft.h"
 
 void

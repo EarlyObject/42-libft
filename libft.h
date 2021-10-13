@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 14:02:04 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/09 13:10:45 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/09/28 15:19:10 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_list
 }				t_list;
 
 int				ft_atoi(const char *str);
+int				ft_atoi_modf(const char *str);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t count, size_t size);
 int				ft_isalnum(int c);
@@ -71,5 +72,8 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 char			*ft_uitoa(unsigned int n);
 char			*ft_itoa_hex(unsigned long long num, char format);
+t_list			*ft_lstpenultimate(t_list *lst);
+void			ft_insertion_sort(int arr[], int n);
+void			perror_exit(void);
 
 #endif

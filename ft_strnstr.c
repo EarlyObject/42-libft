@@ -10,6 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** LIBRARY: <string.h>
+** SYNOPSIS: locate a substring in a string (size-bounded)
+**
+** DESCRIPTION:
+** 		The strnstr() function locates the first occurrence of the null-termi-
+**	nated string s2 in the string s1, where not more than n characters are
+**	searched.  Characters that appear after a `\0' character are not
+**	searched.
+*/
+
 #include "libft.h"
 
 char
