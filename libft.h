@@ -6,21 +6,36 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 14:02:04 by asydykna          #+#    #+#             */
-/*   Updated: 2021/09/28 15:19:10 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/12/16 13:19:17 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
+# ifndef MAX_FD
+#  define MAX_FD 256
+# endif
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }				t_list;
+
+typedef struct s_gnl
+{
+	int			n;
+	char		*temp;
+}	t_gnl;
 
 int				ft_atoi(const char *str);
 int				ft_atoi_modf(const char *str);
@@ -75,5 +90,10 @@ char			*ft_itoa_hex(unsigned long long num, char format);
 t_list			*ft_lstpenultimate(t_list *lst);
 void			ft_insertion_sort(int arr[], int n);
 void			perror_exit(void);
+int				get_next_line(int fd, char **line);
+void			free_mem(void **p);
+int				ft_endwith(char const *str, char const *end);
+void			ft_free_2d_arr(void **arr);
+char			*ft_concat(const char *s1, const char *s2);
 
 #endif

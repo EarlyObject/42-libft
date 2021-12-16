@@ -6,7 +6,7 @@
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 22:36:01 by asydykna          #+#    #+#             */
-/*   Updated: 2021/02/01 23:41:40 by asydykna         ###   ########.fr       */
+/*   Updated: 2021/12/16 13:15:37 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 ** 		The isalpha() function tests for any character for which isupper(3) or
 **	islower(3) is true.
 */
-
 
 int
 	ft_isalpha(int c)

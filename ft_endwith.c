@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_endwith.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/26 18:43:47 by asydykna          #+#    #+#             */
-/*   Updated: 2021/12/16 13:15:46 by asydykna         ###   ########.fr       */
+/*   Created: 2021/10/18 15:38:22 by asydykna          #+#    #+#             */
+/*   Updated: 2021/12/16 13:15:19 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** LIBRARY: <string.h>
-** SYNOPSIS: locate byte in byte string
-**
-** DESCRIPTION:
-** 		The memchr() function locates the first occurrence of c (converted to an
-**	unsigned char) in string s.
-*/
-
 #include "libft.h"
 
-void
-	*ft_memchr(const void *s, int c, size_t n)
+int
+	ft_endwith(char const *str, char const *end)
 {
-	while (n > 0)
-	{
-		if (*(unsigned char *)s == (unsigned char)c)
-			return ((void *)s);
-		s++;
-		n--;
-	}
-	return (NULL);
+	int	length;
+	int	end_length;
+
+	length = ft_strlen(str);
+	end_length = ft_strlen(end);
+	if (end_length > length)
+		return (0);
+	return (!ft_strncmp(str + length - end_length, end, end_length));
 }

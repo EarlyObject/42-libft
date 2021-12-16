@@ -6,7 +6,7 @@
 #    By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 13:13:58 by asydykna          #+#    #+#              #
-#    Updated: 2021/10/04 10:35:25 by asydykna         ###   ########.fr        #
+#    Updated: 2021/10/21 13:02:25 by asydykna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = libft.a
 SRC = ft_atoi.c	\
 	ft_atoi_modf.c	\
 	ft_bzero.c\
-	ft_calloc.c\
+	ft_calloc.c ft_endwith.c\
 	ft_isalnum.c\
 	ft_isalpha.c\
 	ft_isascii.c\
@@ -61,7 +61,7 @@ SRC = ft_atoi.c	\
 	ft_lstiter.c\
 	ft_lstmap.c\
 	ft_lstpenultimate.c\
-	ft_insertion_sort.c
+	ft_insertion_sort.c get_next_line.c ft_free_2d_arr.c ft_endwith.c
 
 OBJ = $(SRC:.c=.o)
 

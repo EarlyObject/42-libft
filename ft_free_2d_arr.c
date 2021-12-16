@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_free_2d_arr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asydykna <asydykna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/26 18:43:47 by asydykna          #+#    #+#             */
-/*   Updated: 2021/12/16 13:15:46 by asydykna         ###   ########.fr       */
+/*   Created: 2021/10/21 13:00:40 by asydykna          #+#    #+#             */
+/*   Updated: 2021/10/21 13:12:03 by asydykna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** LIBRARY: <string.h>
-** SYNOPSIS: locate byte in byte string
-**
-** DESCRIPTION:
-** 		The memchr() function locates the first occurrence of c (converted to an
-**	unsigned char) in string s.
-*/
 
 #include "libft.h"
 
 void
-	*ft_memchr(const void *s, int c, size_t n)
+	ft_free_2d_arr(void **arr)
 {
-	while (n > 0)
+	int	i;
+
+	i = 0;
+	while (arr[i])
 	{
-		if (*(unsigned char *)s == (unsigned char)c)
-			return ((void *)s);
-		s++;
-		n--;
+		free(arr[i]);
+		i++;
 	}
-	return (NULL);
+	free(arr);
 }
