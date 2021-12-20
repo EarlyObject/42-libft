@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <string.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
@@ -95,5 +96,6 @@ void			free_mem(void **p);
 int				ft_endwith(char const *str, char const *end);
 void			ft_free_2d_arr(void **arr);
 char			*ft_concat(const char *s1, const char *s2);
+char			*ft_strtok(char *str, const char *delim);
 
 #endif

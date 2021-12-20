@@ -61,7 +61,8 @@ SRC = ft_atoi.c	\
 	ft_lstiter.c\
 	ft_lstmap.c\
 	ft_lstpenultimate.c\
-	ft_insertion_sort.c get_next_line.c ft_free_2d_arr.c ft_endwith.c
+	ft_insertion_sort.c get_next_line.c ft_free_2d_arr.c ft_endwith.c \
+	ft_strtok.c\
 
 OBJ = $(SRC:.c=.o)
 
